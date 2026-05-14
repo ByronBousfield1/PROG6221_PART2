@@ -59,4 +59,5 @@ CyberAwarenessBot/
 - "Tell me about passwords"
 - "What do you remember about me?"
 - Click any of the Quick Topics in the sidebar
+- Device Security
 - "Bye"
