@@ -22,16 +22,19 @@ namespace CyberAwarenessBot.Services
         {
             topicKeywords = new Dictionary<string, List<string>>(StringComparer.OrdinalIgnoreCase)
             {
-                ["password"]      = new List<string> { "password", "passwords", "passcode", "credentials", "login details" },
-                ["phishing"]      = new List<string> { "phish", "phishing", "fake email", "suspicious email", "spoof" },
-                ["scam"]          = new List<string> { "scam", "scammer", "fraud", "fraudster", "419", "smishing", "vishing" },
-                ["privacy"]       = new List<string> { "privacy", "private", "personal data", "personal info", "popi", "popia", "data protection" },
+                ["password"] = new List<string> { "password", "passwords", "passcode", "credentials", "login details" },
+                ["phishing"] = new List<string> { "phish", "phishing", "fake email", "suspicious email", "spoof" },
+                ["scam"] = new List<string> { "scam", "scammer", "fraud", "fraudster", "419", "smishing", "vishing" },
+                ["privacy"] = new List<string> { "privacy", "private", "personal data", "personal info", "popi", "popia", "data protection" },
                 ["safe browsing"] = new List<string> { "brows", "browser", "https", "website safety", "url" },
-                ["malware"]       = new List<string> { "malware", "virus", "ransomware", "trojan", "spyware", "worm" },
+                ["malware"] = new List<string> { "malware", "virus", "ransomware", "trojan", "spyware", "worm" },
                 ["two-factor authentication"] = new List<string> { "2fa", "two factor", "two-factor", "mfa", "authenticator" },
-                ["public wifi"]   = new List<string> { "wifi", "wi-fi", "public network", "hotspot" },
-                ["social media"]  = new List<string> { "social media", "facebook", "instagram", "twitter", "tiktok", "whatsapp" },
-                ["identity theft"] = new List<string> { "identity theft", "id theft", "stolen identity", "impersonation" }
+                ["public wifi"] = new List<string> { "wifi", "wi-fi", "public network", "hotspot" },
+                ["social media"] = new List<string> { "social media", "facebook", "instagram", "twitter", "tiktok", "whatsapp" },
+                ["identity theft"] = new List<string> { "identity theft", "id theft", "stolen identity", "impersonation" },
+
+                // NEW KEYWORD TOPIC ADDED HERE:
+                ["device security"] = new List<string> { "device", "stolen phone", "lost laptop", "screen lock", "pin code", "usb" }
             };
 
             topicResponses = new Dictionary<string, List<string>>(StringComparer.OrdinalIgnoreCase)
@@ -111,6 +114,16 @@ namespace CyberAwarenessBot.Services
                     "Shred documents containing personal details before throwing them away.",
                     "Check your credit report annually with bureaus like TransUnion or Experian to spot suspicious accounts opened in your name.",
                     "If your ID is lost or stolen, report it to SAPS immediately and register it with the Southern African Fraud Prevention Service (SAFPS)."
+                },
+
+                // NEW TOPIC RESPONSES ADDED HERE:
+                ["device security"] = new List<string>
+                {
+                    "Always use a strong PIN, password, or biometric lock (like fingerprint or FaceID) on your phone and laptop.",
+                    "Enable 'Find My Device' for your phone and laptop so you can track, lock, or wipe them if they are lost or stolen.",
+                    "Set your devices to automatically lock their screens after a short period of inactivity, like 1 or 2 minutes.",
+                    "Be extremely careful with USB drives from unknown sources; they can contain malware that infects your device the moment they are plugged in.",
+                    "Never leave your laptop, tablet, or phone unattended in a public place, even if it's just for a minute."
                 }
             };
         }
